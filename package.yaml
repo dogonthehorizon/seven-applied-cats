@@ -1,0 +1,33 @@
+name:                seven-applied-cats
+version:             0.1.0
+synopsis:            Solutions to "An Invitation to Applied Category Theory"
+homepage:            https://github.com/githubuser/seven-applied-cats#readme
+license:             MIT
+author:              Fernando Freire
+maintainer:          Fernando Freire <dogonthehorizon@gmail.com>
+copyright:           2019 Fernando Freire
+category:            Exercises
+extra-source-files:
+- README.md
+
+dependencies:
+  - base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  seven-applied-cats-test:
+    main: Tasty.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+      - -Wno-missing-signatures
+    dependencies:
+      - seven-applied-cats
+      - tasty
+      - tasty-smallcheck
+      - tasty-discover
+      - smallcheck
