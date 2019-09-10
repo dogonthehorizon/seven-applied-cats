@@ -27,4 +27,4 @@ stack build --fast --test --file-watch
 [Stack]: https://docs.haskellstack.org/en/stable/README/
 [cats]: https://arxiv.org/abs/1803.05316
 [Haskell]: https://www.haskell.org/
-[isbn]: https://books.google.com/books?id=jGuhDwAAQBAJ&pg=PR4&dq=isbn+978-1-108-71182-1#v=onepage&q=isbn%20978-1-108-71182-1&f=false
+[isbn]: https://books.google.com/books?id=jGuhDwAAQBAJ&dq=isbn+978-1-108-71182-1&source=gbs_navlinks_s
