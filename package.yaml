@@ -30,4 +30,5 @@ tests:
       - tasty
       - tasty-smallcheck
       - tasty-discover
+      - tasty-hunit
       - smallcheck

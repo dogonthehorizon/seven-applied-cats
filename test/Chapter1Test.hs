@@ -3,9 +3,13 @@
 
 module Chapter1Test where
 
+import qualified Data.List as List
 import Test.SmallCheck.Series (Serial)
 import Test.Tasty             (TestTree, testGroup)
 import Test.Tasty.SmallCheck  (testProperty, (==>))
+import           Test.Tasty.HUnit                         (testCase, (@?=))
+
+import Chapter1
 
 -- | Exercise 1.1 (pg. 2)
 --
@@ -33,3 +37,16 @@ test_idIsFooPreserving = fooPreservingSuite "id" (id :: Int -> Int)
 -- test_halfIsNotFooPreserving   = fooPreservingSuite "half" (\ (x :: Int) -> div x 2)
 -- test_doubleIsNotFooPreserving = fooPreservingSuite "double" (\ (x :: Int) -> x * 2)
 -- test_powTwoIsNotFooPreserving = fooPreservingSuite "powTwo" (\ (x :: Int) -> x ^ 2)
+
+-- | Exercise 1.3
+-- TODO still very much WIP
+-- 1. Write down all the partitions of a two-element set {., *}, order them as
+-- above, and draw the Hasse diagram.
+--
+-- 2. Now do the same thing for a four-element set, say {1,2,3,4}. There should
+-- be 15 partitions.
+
+test_exerciseOneDotThree = testGroup "Exercise 1.3" [
+    testProperty "partitions are defined correctly" $ \(xs :: [Int]) ->
+      possiblePartitions xs == length (partitions xs)
+  ]
